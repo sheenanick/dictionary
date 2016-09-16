@@ -2,9 +2,13 @@
 
 <h3>Words:</h3>
 <ul>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
+  #foreach ($word in $words)
+    <li class="words">$word.getWord():</li>
+    #foreach ($definition in $word.getDefinitions())
+      <ul>
+        <li class="definitions">$definition.getDefinition()</li>
+      </ul>
+    #end
+  #end
 </ul>
+<button class="btn btn-primary" type="button" name="add-word">Add a word</button>

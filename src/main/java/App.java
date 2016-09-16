@@ -9,5 +9,29 @@ public class App {
     staticFileLocation("/public");
     String layout = "templates/layout.vtl";
 
+    get("/", (request, response) -> {
+      Map<String, Object> model = new HashMap<String, Object>();
+      Word beer = new Word("beer");
+      Definition beerDef = new Definition("beer def");
+      beer.addDefinition(beerDef);
+      Word vodka = new Word("vodka");
+      Definition vodkaDef = new Definition("vodka def");
+      vodka.addDefinition(vodkaDef);
+      Word tequila = new Word("tequila");
+      Definition tequilaDef = new Definition("tequila def");
+      tequila.addDefinition(tequilaDef);
+      Word gin = new Word("gin");
+      Definition ginDef = new Definition("gin def");
+      gin.addDefinition(ginDef);
+      Word whiskey = new Word("whiskey");
+      Definition whiskeyDef1 = new Definition("whiskey def1");
+      whiskey.addDefinition(whiskeyDef1);
+      Definition whiskeyDef2 = new Definition("whiskey def2");
+      whiskey.addDefinition(whiskeyDef2);
+      model.put("words", Word.all());
+      model.put("template", "templates/index.vtl" );
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
+
   }
 }
