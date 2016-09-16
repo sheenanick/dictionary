@@ -13,9 +13,9 @@ _This is a program that allows users to create a dictionary to keep track of var
 * _It can return the definition of a word._
   * _Example Input: beer_
   * _Example Output: an alcoholic drink made from yeast-fermented malt flavored with hops._
-* _It can save a new word with a definition._
-  * _Example Input: whiskey, a spirit distilled from malted grain, especially barley or rye._
-  * _Example Output: Word: whiskey, Definition: a spirit distilled from malted grain, especially barley or rye._
+* _It can save a new word to the dictionary._
+  * _Example Input: whiskey_
+  * _Example Output: Word: whiskey_
 * _It can save additional definitions of a word._
   * _Example Input: whiskey, a code word representing the letter W, used in radio communication._
   * _Example Output: Word: whiskey, Definitions: 1. a spirit distilled from malted grain, especially barley or rye. 2. a code word representing the letter W, used in radio communication._
