@@ -12,4 +12,20 @@ public class Definition {
     instances.add(this);
   }
 
+  public String getDefinition() {
+    return mDefinition;
+  }
+
+  public int getId() {
+    return mId;
+  }
+
+  public static List<Definition> all() {
+    return instances;
+  }
+
+  public static void clear() {
+    instances.clear();
+  }
+
 }
