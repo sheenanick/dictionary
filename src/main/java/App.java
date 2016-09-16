@@ -40,5 +40,23 @@ public class App {
       model.put("template", "templates/word.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
+
+    get("/words/:id/definitions/new", (request, response) -> {
+      Map<String, Object> model = new HashMap<String, Object>();
+      Word word = Word.find(Integer.parseInt(request.params(":id")));
+      model.put("word", word);
+      model.put("template", "templates/definition-form.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
+
+    post("/words/:id", (request, response) -> {
+      Map<String, Object> model = new HashMap<String, Object>();
+      Definition definition = new Definition(request.queryParams("definition"));
+      Word word = Word.find(Integer.parseInt(request.params(":id")));
+      word.addDefinition(definition);
+      model.put("word", word);
+      model.put("template", "templates/word.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
   }
 }
