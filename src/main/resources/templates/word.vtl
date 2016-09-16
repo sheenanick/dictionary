@@ -1,0 +1,12 @@
+#if ($word)
+<h1>$word.getWord()</h1>
+  #foreach ($definition in $word.getDefinitions())
+    <ul>
+      <li class="definitions">$definition.getDefinition()</li>
+    </ul>
+  #end
+<button class="btn btn-success" type="button" name="add-definition"><a href="/definitions/new">Add a definition</a></button>
+<button class="btn btn-primary" type="button" name="home"><a href="/">Home</a></button>
+#else
+  <em><h4>Oops! We can't seem to find that Word.</h4></em>
+#end

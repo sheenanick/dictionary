@@ -33,8 +33,16 @@ public class Word {
     mDefinitions.add(definition);
   }
 
+  public static Word find(int id) {
+    try {
+      return instances.get(id);
+    } catch (IndexOutOfBoundsException exception) {
+      return null;
+    }
+  }
+
   public static void clear() {
     instances.clear();
   }
-  
+
 }
