@@ -33,4 +33,8 @@ public class Word {
     mDefinitions.add(definition);
   }
 
+  public static void clear() {
+    instances.clear();
+  }
+  
 }
