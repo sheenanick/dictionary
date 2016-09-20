@@ -22,11 +22,10 @@ public class App {
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-    post("/", (request, response) -> {
+    post("/words/new", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
       Word word = new Word(request.queryParams("word"));
-      model.put("words", Word.all());
-      model.put("template", "templates/index.vtl");
+      response.redirect("/");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
@@ -46,13 +45,13 @@ public class App {
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-    post("/words/:id", (request, response) -> {
+    post("/words/:id/definitions/new", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
       Definition definition = new Definition(request.queryParams("definition"));
-      Word word = Word.find(Integer.parseInt(request.params(":id")));
+      int wordId = Integer.parseInt(request.params(":id"));
+      Word word = Word.find(wordId);
       word.addDefinition(definition);
-      model.put("word", word);
-      model.put("template", "templates/word.vtl");
+      response.redirect("/words/" + wordId);
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
