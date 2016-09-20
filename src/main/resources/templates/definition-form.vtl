@@ -3,9 +3,8 @@
 <form action="/words/$word.getId()/definitions/new" method="post">
   <div class="form-group">
     <label for="definition">Definition:</label>
-    <input type="text" name="definition" required>
+    <input class="form-control" type="text" name="definition" required>
   </div>
   <button class="btn btn-success" type="submit" name="add-definition">Add</button>
+  <a href="/words/$word.getId()"><button class="btn btn-primary" type="button" name="go-back">Go Back</button></a>
 </form>
-
-<a href="/">Home</a>
