@@ -1,4 +1,4 @@
-# _Dictionary_
+# Dictionary
 
 #### _A Dictionary Program for Epicodus Java Week 2 Independent Project, 09.16.2016_
 
@@ -6,38 +6,40 @@
 
 ## Description
 
-_This is a program that allows users to create a dictionary to keep track of various words and their multiple definitions._
+This is a program that allows users to create a dictionary to keep track of various words and their multiple definitions.
 
 ## Specifications
 
-* _It can return the definition of a word._
+* It can return the definition of a word.
   * _Example Input: beer_
   * _Example Output: an alcoholic drink made from yeast-fermented malt flavored with hops._
-* _It can save a new word to the dictionary._
+* It can save a new word to the dictionary.
   * _Example Input: whiskey_
   * _Example Output: Word: whiskey_
-* _It can save additional definitions of a word._
+* It can save additional definitions of a word.
   * _Example Input: whiskey, a code word representing the letter W, used in radio communication._
   * _Example Output: Word: whiskey, Definitions: 1. a spirit distilled from malted grain, especially barley or rye. 2. a code word representing the letter W, used in radio communication._
 
 ## Setup/Installation Requirements
 
-* _Clone this repository_
-* _Run the main method by entering Gradle Run in your terminal._
-* _View localhost:4567 in a web browser of your choice._
+You will need [gradle](https://gradle.org/gradle-download/) installed on your device.
+
+* `$ git clone https://github.com/sheenanick/dictionary`
+* `$ gradle run`
+* Navigate to `localhost:4567` in a web browser of your choice.
 
 ## Support and contact details
 
-_Please feel free to contact me through Github or by email at sheenanick@gmail.com if you have any issues or questions, ideas or concerns._
+Please feel free to contact sheenanick@gmail.com if you have any issues or questions, ideas or concerns.
 
 ## Technologies Used
 
-_JavaScript_
-_jQuery_
-_java_
+* JavaScript
+* jQuery
+* Java
 
 ### License
 
-*This software is licensed under a GPL license.*
+This software is licensed under the MIT license.
 
 Copyright (c) 2016 **_Sheena Nickerson_**
